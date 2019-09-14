@@ -4,7 +4,7 @@ import os
 import h5py
 
 #Path to your dataset (img, hdr files)
-data_path = '/media/toanhoi/Study/databaseSeg/ISeg/iSeg-2017-Testing'
+data_path = '/media/toanhoi/Study/databaseSeg/ISeg/iSeg-2017-Training'
 #Saved path
 target_path = './data_train_nocut'
 #Reference https://github.com/zhengyang-wang/Unet_3D/tree/master/preprocessing
@@ -66,7 +66,7 @@ def build_h5_dataset(data_path, target_path):
     '''
     Build HDF5 Image Dataset.
     '''
-    for i in range(11,23):
+    for i in range(0,10):
         #Skip subject 9 for validation
         if (i==8):
            continue
