@@ -77,7 +77,7 @@ def build_h5_dataset(data_path, target_path):
         img_T2, header_T2 = load(f_T2)
         f_l = os.path.join(data_path, subject_name + 'label.hdr')
         labels, header_label = load(f_l)
-        labels=np.zeros(img_T1.shape)
+        #labels=np.zeros(img_T1.shape)
         inputs_T1 = img_T1.astype(np.float32)
         inputs_T2 = img_T2.astype(np.float32)
         labels = labels.astype(np.uint8)
